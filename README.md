@@ -2,8 +2,8 @@
 Real-time Quantum Circuit Simulator & 3D Visualizer
 
 Experience the strange world of quantum mechanics directly in your browser, visualized in real-time.
-
-<br /> <div align="center"> <a href="https://github.com/yourusername/your-repo-name"> <img src="screenshots/demo.png" alt="QuantaSim-RT Demo Screenshot" width="800"> </a> <p><em>(Please add a screenshot of the running application to the 'screenshots' folder and uncomment this line)</em></p> </div> <br />
+<img width="2969" height="1413" alt="image" src="https://github.com/user-attachments/assets/23b53499-0cd1-4a7d-8bcd-663e1ae63be6" />
+<img width="2975" height="1479" alt="image" src="https://github.com/user-attachments/assets/1c76c2c7-e643-4c61-86b0-766a50650137" />
 
 📖 About The Project
 QuantaSim-RT is a full-stack web application that allows users to build and simulate small-scale quantum circuits interactively.
@@ -76,8 +76,8 @@ Clone the repository
 
 Bash
 
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/EMMA019/Quantum-Simulator/.git
+cd Quantum-Simulator
 Setup Backend (Python)
 
 Bash
