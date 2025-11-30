@@ -10,7 +10,7 @@ This project was built by my proprietary
 **AI Development Orchestration System**.
 
 **How it works:**
-- Human instruction → Automated architecture design
+- Human instruction 
 - Powered by Gemini 2.5 Flash (free tier)
 - **Result: Production-ready full-stack app in 1 hour**
 
