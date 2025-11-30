@@ -39,8 +39,6 @@ The development process was highly collaborative, combining human direction with
 * **Core Logic Generation:** AI-Assisted
 
 By leveraging AI for heavy-lifting tasks like initial coding and immediate debugging, the project was completed **with remarkable speed for a solo development effort**.
-* *【Note: The claim of "20-30x faster" has been removed and replaced with a more objective statement.】*
-
 ---
 
 ## ⚙️ Built With
