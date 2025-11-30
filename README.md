@@ -34,8 +34,6 @@ Core Logic Generation: AI Assistant (Grok model)
 
 Refactoring, Debugging & Integration: AI Assistant (Gemini model)
 
-Total Development Time: ~1 Hour 🚀
-
 By leveraging AI for heavy lifting in coding and immediate debugging, we achieved a development speed estimated to be 20-30x faster than traditional solo development for a project of this complexity.
 
 <br />
