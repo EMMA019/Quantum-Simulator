@@ -10,7 +10,7 @@ Experience the principles of quantum mechanics through interactive, real-time vi
 
 ## 📖 About The Project
 
-QuantaSim-RT is a full-stack web application that allows users to build and simulate small-scale quantum circuits interactively.
+QuantaSim-RT is a web application that allows users to build and simulate small-scale quantum circuits interactively.
 
 This project utilizes a robust Python backend powered by **Qiskit Aer** to perform physically accurate quantum state calculations. Notably, it handles the complexity of mixed states resulting from entanglement by calculating **reduced density matrices**.
 
