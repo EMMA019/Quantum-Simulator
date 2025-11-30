@@ -4,6 +4,21 @@ A real-time quantum circuit simulator and 3D visualization tool that runs direct
 Experience the principles of quantum mechanics through interactive, real-time visualization.
 <img width="2969" height="1413" alt="image" src="https://github.com/user-attachments/assets/23b53499-0cd1-4a7d-8bcd-663e1ae63be6" />
 <img width="2975" height="1479" alt="image" src="https://github.com/user-attachments/assets/1c76c2c7-e643-4c61-86b0-766a50650137" />
+## 🤖 Development Story
+
+This project was built by my proprietary 
+**AI Development Orchestration System**.
+
+**How it works:**
+- Human instruction → Automated architecture design
+- Multi-candidate generation → AST-based optimal selection
+- Powered by Gemini 2.5 Flash (free tier)
+- **Result: Production-ready full-stack app in 1 hour**
+
+The system itself remains private for now,
+but this quantum simulator proves what it can do.
+
+> **Interested in the tech or potential collaboration? Reach out: [tarocha1019@icloud.com]**
 
 
 ---
