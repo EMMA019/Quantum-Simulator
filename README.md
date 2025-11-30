@@ -12,6 +12,7 @@ Unlike simple simulators, this project uses a robust Python backend powered by Q
 
 
 code
+
 import numpy as np
 import qiskit
 from qiskit_aer import Aer
