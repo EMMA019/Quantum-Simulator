@@ -1,0 +1,185 @@
+/* ピクセルフォントの導入（Google Fonts） */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  /* SFC風レトロカラーパレット */
+  --retro-bg-dark: #212529; /* 暗い背景 */
+  --retro-bg-light: #343a40; /* 少し明るい背景（パネル用） */
+  --retro-border: #adb5bd;   /* 枠線（グレー） */
+  --retro-text: #f8f9fa;     /* テキスト色 */
+  --retro-accent-blue: #0074d9; /* アクセント（青）SFCボタン色 */
+  --retro-accent-red: #ff4136;  /* アクセント（赤）SFCボタン色 */
+  --retro-accent-yellow: #ffdc00; /* アクセント（黄）SFCボタン色 */
+  --retro-accent-green: #2ecc40;  /* アクセント（緑）SFCボタン色 */
+  --retro-crt-green: #39ff14;   /* CRTモニター風グリーン */
+}
+
+body {
+  margin: 0;
+  /* フォントをピクセルフォントに変更 */
+  font-family: 'Press Start 2P', cursive, monospace;
+  /* レトロな背景色 */
+  background-color: var(--retro-bg-dark);
+  color: var(--retro-text);
+  /* CRTモニター風の走査線エフェクト（うっすらと） */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+  background-size: 100% 4px;
+  min-height: 100vh;
+  font-size: 12px; /* ピクセルフォントは大きすぎると見づらいので調整 */
+}
+
+.App {
+  /* 一画面に収めるためのGridレイアウト */
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* ヘッダー、メイン、フッター */
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* --- ヘッダー --- */
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  /* レトロな枠線 */
+  border: 4px solid var(--retro-border);
+  background-color: var(--retro-bg-light);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px var(--retro-accent-blue);
+}
+
+.status-indicator {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* --- メインコンテンツ（コックピットレイアウト） --- */
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* 左側(回路)を広く、右側(可視化)を狭く */
+  gap: 15px;
+  overflow: hidden; /* スクロールを防ぐ */
+}
+
+/* 共通のレトロパネルスタイル */
+.retro-panel {
+  border: 4px solid var(--retro-border);
+  background-color: var(--retro-bg-light);
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 4px 4px 0px rgba(0,0,0,0.3);
+  overflow: auto; /* 内容が溢れたらスクロール */
+}
+
+.editor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.visualization-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- コントロール（Qubit数設定など） --- */
+.controls-panel {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.qubit-config input {
+  background-color: var(--retro-bg-dark);
+  border: 2px solid var(--retro-border);
+  color: var(--retro-text);
+  font-family: inherit;
+  padding: 5px;
+  width: 60px;
+  text-align: center;
+}
+
+/* --- ブロッホ球表示エリア --- */
+.bloch-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-height: 50vh; /* 高さを制限 */
+  overflow-y: auto;
+}
+
+/* --- 確率分布表示エリア --- */
+.probabilities h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  border-bottom: 2px dashed var(--retro-border);
+  padding-bottom: 5px;
+}
+
+.prob-bar-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+
+.prob-bar-wrapper span:first-child {
+  width: 80px; /* 状態ラベルの幅 */
+  font-family: monospace; /* ビット列は等幅で見やすく */
+}
+
+.prob-bar-container {
+  flex-grow: 1;
+  height: 14px;
+  background-color: #000;
+  border: 2px solid var(--retro-border);
+  margin: 0 10px;
+  position: relative;
+}
+
+.prob-bar {
+  height: 100%;
+  /* レトロな緑色のバー */
+  background-color: var(--retro-crt-green);
+  /* ドット絵風のパターン */
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.2) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2) 75%, transparent 75%, transparent);
+  background-size: 4px 4px;
+  transition: width 0.3s ease;
+}
+
+/* --- ログウィンドウ（フッター） --- */
+.logs {
+  /* RPGのメッセージウィンドウ風 */
+  border: 4px solid var(--retro-border);
+  background-color: #000;
+  color: var(--retro-crt-green); /* CRTグリーン文字 */
+  padding: 10px;
+  height: 60px; /* 固定高さ */
+  overflow-y: auto;
+  font-size: 0.8rem;
+  font-family: monospace;
+  box-shadow: inset 0 0 10px var(--retro-crt-green);
+}
+
+/* レトロなスクロールバー */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--retro-bg-dark);
+  border: 2px solid var(--retro-border);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--retro-border);
+  border: 2px outset var(--retro-border);
+}
