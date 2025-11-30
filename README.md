@@ -9,6 +9,8 @@ Experience the strange world of quantum mechanics directly in your browser, visu
 QuantaSim-RT is a full-stack web application that allows users to build and simulate small-scale quantum circuits interactively.
 
 Unlike simple simulators, this project uses a robust Python backend powered by Qiskit Aer to perform physically accurate quantum state calculations, including the handling of mixed states resulting from entanglement (using reduced density matrices). The results are streamed instantly via WebSockets to a modern React frontend, where they are visualized on interactive 3D Bloch spheres using Three.js.
+
+
 code
 import numpy as np
 import qiskit
